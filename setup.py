@@ -1,0 +1,40 @@
+from setuptools import setup, find_packages
+import scdl
+from os import path
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
+setup(
+    name='pyscdl',
+    version=scdl.__version__,
+    packages=find_packages(),
+    author='DarkArtek',
+    author_email='luca@ahd-creative.com',
+    description='Download Music from Souncloud',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    install_requires=[
+        'docopt',
+        'mutagen',
+        'termcolor',
+        'requests',
+        'clint'
+    ],
+    url='https://github.com/DarkArtek/scdl',
+    classifiers=[
+        'Programming Language :: Python',
+        'Development Status :: 5 - Production/Stable',
+        'License :: OSI Approved :: GNU General Public License v2 (GPLv2)',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python :: 3.7',
+        'Topic :: Internet',
+        'Topic :: Multimedia :: Sound/Audio',
+    ],
+    entry_points={
+        'console_scripts': [
+            'scdl = scdl.scdl:main',
+        ],
+    },
+)
