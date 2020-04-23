@@ -1,5 +1,0 @@
-docopt
-mutagen
-termcolor
-requests
-clint
