@@ -49,6 +49,7 @@ cmake-build-*/
 # IntelliJ
 out/
 dist/
+build/
 pyscdl.egg-info/
 pyscdl-1.6.13/
 Solitude.mp3
