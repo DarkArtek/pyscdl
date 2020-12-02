@@ -1,5 +1,9 @@
 # -*- encoding: utf-8 -*-
 
+"""
+Copied from
+https://github.com/davidfischer-ch/pytoolbox/blob/master/pytoolbox/logging.py
+"""
 
 import logging
 import re
@@ -27,7 +31,6 @@ class ColorizeFilter(logging.Filter):
 def size_in_bytes(insize):
     """
     Returns the size in bytes from strings such as '5 mb' into 5242880.
-
     >>> size_in_bytes('1m')
     1048576
     >>> size_in_bytes('1.5m')

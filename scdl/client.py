@@ -2,16 +2,11 @@ import requests
 from scdl import CLIENT_ID
 
 
-import requests
-from scdl import CLIENT_ID
-
-
-class Client():
-
+class Client:
     def get_collection(self, url, token):
         params = {
             'client_id': CLIENT_ID,
-            'linked_partitioning': '1',
+            'linked_partitioning': '1'
         }
         if token:
             params['oauth_token'] = token
@@ -28,4 +23,4 @@ class Client():
                 url = json_data['next_href']
             else:
                 url = None
-        return resources
+            return resources
